@@ -1,0 +1,100 @@
+main {
+  position: relative;
+  min-height: 100vh;
+}
+
+.background-img {
+  mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  display: block;
+  z-index: -1;
+  background-position: 50%;
+}
+
+.banner-container {
+  padding: 208px 80px 0 80px;
+  display: flex;
+  gap: 20px;
+}
+
+.banner-preview-img-container {
+  width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.banner-preview-img-container img {
+  border-radius: 12px;
+}
+
+.banner-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 12px;
+}
+
+.casts-container {
+  margin-top: 80px;
+  padding: 0 80px;
+}
+
+.casts-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.casts-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.casts-grid > div img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+#genres {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#genres span {
+  background: var(--dark-lighten);
+  border: 1px solid white;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 208px 30px 0 30px;
+  }
+
+  .casts-container {
+    padding: 0 30px;
+  }
+
+  .banner-info-action-btn {
+    display: flex;
+    justify-content: center;
+  }
+}
